@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Forms: uso, soporte y extensibilidad</title>
+	
+	<!-- Replace path with correct path to deck.core.css. -->
+	<link rel="stylesheet" href="core/deck.core.css" type="text/css">
+	
+	<!-- Any other extension CSS files go here. -->
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css" type="text/css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css" type="text/css">
+	<link rel="stylesheet" href="themes/style/style.css" type="text/css">
+	<link rel="stylesheet" href="themes/style/web-2.0.css" type="text/css">
+	
+	<!-- Replace path with correct path to Modernizr file. -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<section id="slide-front" class="slide">
+	<img class="logo" src="images/HTML5.png" alt="logo HTML5"/>
+	<h1>HTML5 Forms: uso, soporte y extensibilidad</h1>
+	<div class="slide-footer">
+		<p>César de la Cruz Rueda</p>
+		<p>Gmail: cesarcruz85</p>
+		<p>twitter: @cesarcruzrueda</p>
+	</div>
+	
+</section>
+
+<!-- Create any number of elements with class slide within the container -->
+<section id="slide-intro" class="slide">
+	<h2>¿Qué es HTML5?</h2>
+	<ul>
+		<li class="slide">Inicialmente: evolución del lenguaje de marcado HTML</li>
+		<li class="slide">Tecnologías incluidas en el concepto HTML5:
+			<ul>
+				<li>Semántica
+					<img class="mini-logo" src="images/html5_semantics.png" alt="logo semántica" />
+				</li>
+				<li>Almacenamiento local 
+					<img class="mini-logo"   src="images/html5_offline_storage.png" alt="logo semántica" />
+				</li>
+				<li>Acceso a dispositivos 
+					<img class="mini-logo" src="images/html5_device_access.png" alt="logo semántica" />
+				</li>
+				<li>Conectividad 
+					<img class="mini-logo" src="images/html5_connectivity.png" alt="logo semántica" />
+				</li>
+				<li>Multimedia 
+					<img class="mini-logo" src="images/html5_multimedia.png" alt="logo semántica" />
+				</li>
+				<li>Gráficos, efectos y 3D 
+					<img class="mini-logo"  src="images/html5_3d_effects.png" alt="logo semántica" />
+				</li>
+				<li>Integración y rendimiento 
+					<img class="mini-logo"  src="images/html5_perfintegration.png" alt="logo semántica" />
+				</li>
+				<li>CSS3 
+					<img class="mini-logo" src="images/html5_css3_styling.png" alt="logo semántica" />
+				</li>
+			</ul>
+		</li>
+		<li class="slide">Nos centramos en: semántica</li>
+	</ul>
+</section>
+
+<section id="slide-semantics" class="slide">
+	<h2>HTML5 Semántica: Nuevos Elementos</h2>
+		<div class="slide left">
+			<h3>Tags semánticos</h3>
+			<ul>
+				<li>header</li>
+				<li>footer</li>
+				<li>hgroup</li>
+				<li>nav</li>
+				<li>section</li>
+				<li>aside</li>
+				<li>figure</li>
+				<li>...</li>
+			</ul>
+		</div>
+		<div class="slide left">
+			<h3>Microdatos</h3>
+			<ul>
+				<li>itemscope</li>
+				<li>itemtype</li>
+				<li>itemprop</li>
+			</ul>
+		</div>
+		<div class="slide left">
+			<h3>ARIA</h3>
+				<ul>
+					<li>role</li>
+					<li>aria-labelledby</li>
+					<li>aria-expanded</li>
+				</ul>
+		</div>
+		<div class="slide">
+			<h3>*Forms*</h3>
+		</div>
+	</ul>
+</section>
+
+<section id="slide-old" class="slide">
+	<h2>Forms: old way</h2>
+	<div class="slide">
+		<h3>Implementación</h3>
+		<ul>
+			<li>HTML para marcado</li>
+			<li>JavaScript para:
+				<ul>
+					<li>Validación</li>
+					<li>Ayudas</li>
+					<li>Mejorar usabilidad</li>
+					<li>UI Widgets</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="slide">
+	<h3>Problemas</h3>
+		<ul>
+			<li>Multiples implementaciones -> No estandar</li>
+			<li>Formateo, localización e internacionalización</li>
+			<li>...</li>
+		</ul>
+	</div>
+</section>
+
+<section id="slide-forms" class="slide">
+	<h2>HTML5: Forms</h2>
+	<div class="slide left">
+		<h3>Nuevos tipos</h3>
+		<ul>
+			<li>search</li>
+			<li>tel</li>
+			<li>email</li>
+			<li>url</li>
+			<li>color</li>
+			<li>number</li>
+			<li>date</li>
+			<li>range</li>
+		</ul>
+	</div>
+	<div class="slide left">
+		<h3>Nuevos atributos</h3>
+		<ul>
+			<li>placeholder</li>
+			<li>autofocus</li>
+			<li>maxlength</li>
+			<li>min</li>
+			<li>max</li>
+			<li>step</li>
+			<li>list</li>
+			<li>autocomplete</li>
+			<li>multiple</li>
+			<li>required</li>
+			<li>pattern</li>
+			<li>novalidate</li>
+		</ul>
+	</div>
+	<div class="slide left">
+		<h3>Nuevos Elementos</h3>
+		<ul>
+			<li>meter</li>
+			<li>progress</li>
+			<li>output</li>
+			<li>datalist</li>
+		</ul>
+	</div>
+</section>
+
+<section id="slide-search" class="slide">
+	<h2>Nuevos tipos: Search</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite introducir un término de búsqueda</li>
+			<li>Se permite que se inserte un valor vacío</li>
+			<li>Mismo comportamiento que tipo text, diferente visualización</li>
+			<li>No estandar: uso de atributos results y autosave</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"search"</span> <span class="attr">name</span>=<span class="value">"search"</span> /&gt; <br />
+			&lt;input <span class="attr">type</span>=<span class="value">"search"</span> <span class="attr">name</span>=<span class="value">"search"</span> <span class="attr">results</span>=<span class="value">5</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/search.png" alt="Compatibilidad elemento tipo search" />
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="search">Buscar:</label> <input type="search" name="search" id="search" results />
+					<input type="submit" value="buscar" />
+				</p>				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-tel" class="slide">
+	<h2>Nuevos tipos: Tel</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite editar un número de teléfono</li>
+			<li>No realiza validación, si se requiere, combinar con atributo <a href="#slide-pattern">pattern</a></li>
+			<li>En navegadores móviles, cambio a teclado numérico</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"tel"</span> <span class="attr">name</span>=<span class="value">"phone"</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/tel.png"  alt="Compatibilidad elemento tipo tel"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="phone">Teléfono:</label> <input type="tel" name="phone" id="phone" />
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-email" class="slide">
+	<h2>Nuevos tipos: Email</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite editar una dirección de email</li>
+			<li>Se permite que se inserte un valor vacío</li>
+			<li>Si el valor es introducido, debe introducirse un email válido</li>
+			<li>Su comportamiento y validación puede variar en conjunto con el atributo <a href="#slide-multiple">multiple</a></li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">email</span> <span class="attr">name</span>=<span class="value">email</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/email.png"  alt="Compatibilidad elemento tipo email"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="email">E-mail:</label> <input type=email name=email id=email />
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-url" class="slide">
+	<h2>Nuevos tipos: Url</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite editar una URL absoluta</li>
+			<li>Se permite que se inserte un valor vacío</li>
+			<li>Se permite la inclusión de espacios en el valor del campo</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"url"</span> <span class="attr">name</span>=<span class="value">"url"</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/url.png"  alt="Compatibilidad elemento tipo url"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="url">Web:</label> <input type="url" name="url" id="url" />
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+
+<section id="slide-color" class="slide">
+	<h2>Nuevos tipos: Color</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite introducir un valor para la representación de un color</li>
+			<li>El valor debe ser una representación de un color simple:
+				<ul>
+					<li>longitud de 7 carácteres</li>
+					<li>Caracteres inicial: '#'</li>
+					<li>El resto números hexadecimales en minúscula</li>
+				</ul>
+			</li>
+			<li>Puede incluirse un selector de color al hacer foco en el control</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"color"</span> <span class="attr">name</span>=<span class="value">"color"</span> /&gt; <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/color.png"  alt="Compatibilidad elemento tipo color"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="color">Color:</label> <input type="color" name="color" id="color" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-number" class="slide">
+	<h2>Nuevos tipos: Number</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite introducir un valor para la representación de un número</li>
+			<li>No se permite introducir el valor vacío</li>
+			<li>Valores numéricos en punto flotante</li>
+			<li>Usado generalmente con los atributos <a href="#slide-minmaxstep">min, max y step</a></li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"number"</span> <span class="attr">name</span>=<span class="value">"number"</span> <span class="attr">min</span>=<span class="value">1</span> <span class="attr">max</span>=<span class="value">200</span> /&gt; <br/>
+			&lt;input <span class="attr">type</span>=<span class="value">"number"</span> <span class="attr">name</span>=<span class="value">"number"</span> <span class="attr">min</span>=<span class="value">30</span> <span class="attr">max</span>=<span class="value">300</span> <span class="attr">step</span>=<span class="value">0.5</span> /&gt; <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/number.png"  alt="Compatibilidad elemento tipo number"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="number1">Edad:</label> <input id="number1" type="number" name="number" min=1 max=200 /> 
+				</p>
+				<p>
+					<label for="number2">Peso:</label> <input id="number2" type="number" name="number" min=30 max=300 step=0.5 /> 
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-date" class="slide">
+	<h2>Nuevos tipos: Date</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite introducir un valor para una fecha.</li>
+			<li>Presentación en formato local del cliente.</li>
+			<li>Envío en formato UTC (yyyy-mm-dd).</li>
+			<li>Alternativas:
+				<ul>
+					<li>datetime: yyyy-mm-dd HH:MM</li>
+					<li>datetime-local: yyyy-mm-dd HH:MM</li>
+					<li>month: yyyy-mm</li>
+					<li>week: yyyy-mmW</li>
+					<li>time: HH:MM</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"date"</span> <span class="attr">name</span>=<span class="value">"date"</span> /&gt; <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/date.png"  alt="Compatibilidad elemento tipo date"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label for="date">Fecha:</label> <input type="date" name="date" id="date" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-range"  class="slide">
+	<h2>Nuevos tipos: Range</h2>
+	<div class="slide">
+		<h3>Características:</h3>
+		<ul>	
+			<li>Elemento de formulario que permite introducir un valor para la representación de un número en un rango</li>
+			<li>Valores numéricos enteros y punto flotante, no vacío</li>
+			<li>No busca exactitud en el valor, simplifica la interfaz se selección</li>
+			<li>Usado obligatoriamente con los atributos <a href="#slide-minmaxstep">min, max y step</a>
+				<ul>
+					<li>min: 0</li>
+					<li>max: 100</li>
+					<li>step: 1</li>
+					<li>value: (min + max) / (max-min)</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"range"</span> <span class="attr">name</span>=<span class="value">"range"</span> /&gt; <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/range.png"  alt="Compatibilidad elemento tipo range"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p class="rangecontainer">
+					<span>Rango:</span>
+					<input type="range" name="range" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+	
+</section>
+
+<section id="slide-placeholder" class="slide">
+	<h2>Nuevos Atributos: Placeholder</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Representa una pequeña ayuda que pretende indicar al usuario qué contenido debe introducir</li>
+			<li>Representado contenido en el elemento con un color más suave que desaparece al hacer foco en el elemento</li>
+			<li>Válido en inputs y textarea</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span <span class="attr">name</span>=<span class="value">"name"</span> <span class="attr">placeholder</span>=<span class="value">"nombre"</span> /&gt; <br />
+			&lt;textarea <span class="attr">name</span>=<span class="value">"description"</span> <span class="attr">placeholder</span>=<span class="value">"nombre"</span> &gt; &lt;/textarea&gt;  <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/placeholder.png"  alt="Compatibilidad elemento placeholder"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input type="text" name="name" placeholder="nombre" />
+				</p>
+				<p>
+					<span>Descripción:</span>
+					<textarea name="description" placeholder="Descripcion personal"></textarea>
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-autofocus" class="slide">
+	<h2>Nuevos Atributos: Autofocus</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Automáticamente pone el foco en el primer elemento de la página con este atributo</li>
+			<li>Tipo booleano: si se encuentra (aún sin valor) es true</li>
+			<li>No debe haber más de uno con este atributo en una misma página</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span <span class="attr">name</span>=<span class="value">"name"</span> <span class="attr">autofocus</span> /&gt; <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/autofocus.png"  alt="Compatibilidad elemento autofocus"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input name="nombre" id="nombre" autofocus /> 
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-maxlength" class="slide">
+	<h2>Nuevos Atributos: Maxlength</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Representa un límite máximo para el número de caracteres a introducir en un campo</li>
+			<li>Debe tener un valor entero positivo, si no -> no límite</li>
+			<li>Se debe prevenir que el usuario introduzca un valor de longitud mayor</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span <span class="attr">name</span>=<span class="value">"name"</span> <span class="attr">maxlength</span>=<span class="value">"5"</span> /&gt; <br />
+			&lt;textarea <span class="attr">name</span>=<span class="value">"description"</span> <span class="attr">maxlength</span>=<span class="value">"20"</span> &gt; &lt;/textarea&gt;  <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/maxlength.png"  alt="Compatibilidad atributo maxlength" />
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input name="name" maxlength="5" />
+				</p>
+				<p>
+					<span>Descripción:</span>
+					<textarea name="description" maxlength="20" > </textarea>
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-list" class="slide">
+	<h2>Nuevos Atributos: List</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indica un conjunto de valores sugeridos para un campo</li>
+			<li>Debe asociarse a un elemento datalist existente en la página</li>
+			<li>Los posibles valores, indicados como elementos option del datalist</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">name</span>=<span class="value">tech</span> <span class="attr">list</span>=<span class="value">techdata</span>&gt; <br/>
+			&lt;datalist <span class="attr">id</span>=<span class="value">techdata</span>&gt;<br/>
+				&lt;option <span class="attr">value</span>=<span class="value">"PHP"</span> &gt;<br/>
+			&lt;/datalist&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/list.png"  alt="Compatibilidad atributo list"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input type=text list=techdata>
+					<datalist id=techdata>
+					  <option value="Ruby">
+					  <option value="PHP">
+					  <option value="jQuery">
+					  <option value="CSS">
+					  <option value="HTML">
+					  <option value="HTML5">
+					</datalist>
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-autocomplete" class="slide">
+	<h2>Nuevos Atributos: Autocomplete</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indica si se quiere autocompletado para el campo en cuestión</li>
+			<li>valor 'on' si se quiere, 'off' si no. Por defecto 'on'</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">name</span>=<span class="value">name</span> <span class="attr">autocomplete</span>=<span class="value">off</span>&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/autocomplete.png"  alt="Compatibilidad atributo autocomplete"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input type="text" name="email" autocomplete="on" placeholder="con autocomplete" />
+				</p>
+				<p>
+					<span>Nombre:</span>
+					<input type="text" name="email" autocomplete="off"  placeholder="sin autocomplete" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-required" class="slide">
+	<h2>Nuevos Atributos: Required</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Obliga a introducir un valor para el campo</li>
+			<li>Tipo booleano</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span <span class="attr">name</span>=<span class="value">"name"</span> <span class="attr">required</span> /&gt; <br />
+			&lt;textarea <span class="attr">name</span>=<span class="value">"description"</span> <span class="attr">required</span> &gt; &lt;/textatea&gt;  <br />
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/required.png"  alt="Compatibilidad atributo required"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Nombre:</span>
+					<input type="text" name="name" required/>
+				</p>
+				<p>
+					<span>Descripción:</span>
+					<textarea name="description" required ></textarea>
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-pattern" class="slide">
+	<h2>Nuevos Atributos: Pattern</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indica un patrón de validación para el valor del campo</li>
+			<li>Se usan expresiones regulares para definir el patrón</li>
+			<li>Se debe incluir un title (y placeholder) para ayudar al usuario a entender el patrón</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"tel" <span class="attr">title</span>=<span class="value">"Número de teléfono con 9 digítos, extensión de país optativa" <span class="attr">name</span>=<span class="value">"phone" <br /><span class="attr">pattern</span>=<span class="value">"^(\+\d{2} )?(\d{9})$"</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/pattern.png"  alt="Compatibilidad atributo pattern"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Teléfono:</span>
+					<input type="tel" name="phone" title="(+34) 123456789" pattern="^(\+\d{2} )?(\d{9})$" placeholder="(+34) 123456789" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-minmaxstep" class="slide">
+	<h2>Nuevos Atributos: min, max, step</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indicar valor mínimo, máximo y cantidad a sumar en cada paso</li>
+			<li>Usados en campos numéricos: number, range y progress</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">"number" <span class="attr">name</span>=<span class="value">"weight" <span class="attr">min</span>=<span class="value">30</span> <span class="attr">max</span>=<span class="value">500</span> <span class="attr">step</span>=<span class="value">0.5</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/minmaxstep.png"  alt="Compatibilidad atributos min, max y step"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<span>Peso:</span>
+					<input type="number" name="weight" min=30 max=80 step=0.5 value="50" />
+				</p>
+				<input type="submit" />
+				
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-novalidate" class="slide">
+	<h2>Nuevos Atributos: Novalidate</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indica que un elemento o formulario no debe realizar validación</li>
+			<li>Tipo booleano</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;form <span class="attr">novalidate</span>&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/novalidate.png"  alt="Compatibilidad atributo novalidate"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form novalidate>
+			<fieldset>
+				<p>
+					<span>Peso:</span>
+					<input type="number" name="weight" min=30 max=80 step=0.5 value="50" />
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-multiple" class="slide">
+	<h2>Nuevos Atributos: Multiple</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Indica que campo admite que se indiquen más de un valor</li>
+			<li>Tipo booleano</li>
+			<li>Tipicamente usado en type=file y type=email</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;input <span class="attr">type</span>=<span class="value">file</span> <span class="attr">multiple</span>&gt;<br/>
+			&lt;input <span class="attr">type</span>=<span class="value">email</span> <span class="attr">multiple</span>&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/multiple.png"  alt="Compatibilidad atributo multiple"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<input type=file multiple>
+					
+				</p>
+				<p>
+					<label>Emails:</label>
+					<input type=email multiple>	
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+	
+</section>
+
+<section id="slide-meter" class="slide">
+	<h2>Nuevos Elementos: Meter</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Representa una medida dentro de un rango conocido</li>
+			<li>Atributos: min, max, value, high, low y optimum</li>
+			<li>Uso: porcentaje de uso, número de respuestas correctas</li>
+			<li>No sirve para progreso, para ello: <a href="#slide-progress">progress</a></li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;meter <span class="attr">min</span>=<span class="value">0</span> <span class="attr">max</span>=<span class="value">20</span> 
+			<span class="attr">low</span>=<span class="value">5</span>
+			<span class="attr">high</span>=<span class="value">15</span>
+			 <span class="attr">value</span>=<span class="value">12</span>&gt;12cm&lt;/meter&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/meter.png"  alt="Compatibilidad elemento meter"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+				<p>
+					<label>Valores:</label>
+					<p><label>Normal:</label><meter min=0 max=20 low=5 high=15 value=12>12cm</meter></p>
+					<p><label>Alto:</label><meter min=0 max=20 low=5 high=15 value=18>18cm</meter></p>
+					<p><label>Bajo:</label><meter min=0 max=20 low=5 high=15 value=4>4cm</meter></p>
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-progress" class="slide">
+	<h2>Nuevos Elementos: Progress</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Representa la medida del progreso de una tarea</li>
+			<li>Atributos: max, value, y position</li>
+			<li>Uso: progreso en formulario, indicación de actividad en progreso</li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;progress <span class="attr">max</span>=<span class="value">10</span> <span class="attr">value</span>=<span class="value">5</span> /&gt;
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Compatibilidad:</h3>
+		<img src="images/progress.png"  alt="Compatibilidad elemento progress"/>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form>
+			<fieldset>
+					<p>
+						<label>0/3:</label><progress max=3 value=0 />
+					</p>
+					<p>
+						<label>1/3:</label><progress max=3 value=1 />
+					</p>
+					<p>
+						<label>2/3:</label><progress max=3 value=2 />
+					</p>
+					<p>
+						<label>3/3:</label><progress max=3 value=3 />
+					</p>
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section id="slide-output" class="slide">
+	<h2>Nuevos Elementos: Output</h2>
+	<div class="slide">
+		<h3>Características</h3>
+		<ul>
+			<li>Representa el resultado de un calculo</li>
+			<li>Requiere lógica de calculo con JavaScript</li>
+		</ul>
+	</div>
+	
+	<div class="slide">
+		<h3>Formato:</h3>
+		<div class="code">
+			&lt;form <span class="attr">id</span>=<span class="value">"output-form"</span> <span class="attr">oninput</span>=<span class="value">"document.getElementById('o').innerHTML =  = calculation()" </span> &gt;<br />
+			&lt;input <span class="attr">type</span>=<span class="value">number</span> <span class="attr">name</span>=<span class="value">"a"</span> <span class="attr">id</span>=<span class="value">"a"</span> /&gt; <br />
+			&lt;input <span class="attr">type</span>=<span class="value">number</span> <span class="attr">name</span>=<span class="value">"b"</span> <span class="attr">id</span>=<span class="value">"b"</span> /&gt; <br />
+			&lt;output <span class="attr">id</span>=<span class="value">"o"</span> /&gt;
+			
+		</div>
+	</div>
+	<div class="slide">
+		<h3>Ejemplo:</h3>
+		<form oninput="document.getElementById('o').innerHTML = parseFloat(document.getElementById('a').value) + parseFloat(document.getElementById('b').value)">
+			<fieldset>
+					<p>
+						<label>a</label><input type=number name="a" id="a" />
+					</p>
+					<p>
+						<label>b</label><input type=number name="b" id="b" />
+					</p>
+					<p>
+						<label>=</label> <output id="o"/>
+					</p>
+				</p>
+				<input type="submit" />
+			</fieldset>
+		</form>
+	</div>
+	
+</section>
+
+<section id="slide-ejemplo" class="slide">
+	<h2>Ejemplo</h2>
+	<a href="ejemplo.html">ejemplo</a>
+</section>
+
+<section class="slide">
+	<h2>Extensibilidad: Pseudo-Selectores</h3>
+	<ul>
+		<li>:invalid : Activo cuando el valor introducido en el campo NO es válido</li>
+			<div class="code">:invalid { <span class="attr">box-shadow</span>: <span class="value">0px 0px 5px red</span>; }</div>
+		<li>:valid : Activo cuando el valor introducido en el campo es válido</li>
+			<div class="code">:valid { <span class="attr">box-shadow</span>: <span class="value">0px 0px 5px green</span>; }</div>
+		<li>:required : Activo cuando el campo tiene el atributo required</li>
+			<div class="code">:required { <span class="attr">box-shadow</span>: <span class="value">0px 0px 5px #333</span>; }</div>
+		<li>:optional : Activo cuando el campo NO tiene el atributo required</li>
+			<div class="code">:optional { <span class="attr">box-shadow</span>: <span class="value">0px 0px 5px #999</span>; }</div>
+		
+	</ul>
+</section>
+<section class="slide">
+	<h2>Extensibilidad: Javascript</h2>
+	<h3>Funciones</h3>
+	<ul>
+		<li>checkValidity(): comprueba la validez de un elemento o un formulario</li>
+		<li>setCustomValidity(string): establece el mensaje de error</li>		
+	</ul>
+	<h3>Objetos</h3>
+	<ul>
+		<li>validity: objecto de comprobación de validación, a su vez tiene:
+			<ul>
+				<li>customError: si tiene un customValidity seteado</li>
+				<li>patternMismatch: si no cumple el patron indicado</li>
+				<li>rangeOverflow: si está por encima del máximo valor</li>
+				<li>rangeUnderflow si está por debajo del mínimo valor</li>
+				<li>stepMismatch: si no se encuentra entre los valores válidos para step</li>
+				<li>tooLong: si sobrepasa el valor de maxlenght</li>
+				<li>typeMismatch: si el tipo no es válido</li>
+				<li>valid: si es válido</li>
+				<li>valueMissing: si es requerido y no tiene un valor establecido</li>
+			</ul>
+		</li>
+	</ul>	
+</section>
+
+<section class="slide">
+	<h2>Conclusiones</h2>
+	<ul>
+		<li>Los HTML5 Forms se puede usar desde ya para:
+			<ul>
+				<li>Tipos: Email, teléfonos y urls</li>
+				<li>Atributos</u>: Requeridos, patrones, longitud máxima, placeholders, multiple, autofocus</li>
+				<li>Elementos: output</li>
+			</ul>
+		</li>
+		<li>El resto:
+			<ul>
+				<li>Tipos: como type text</li>
+				<li>Atributos: No considerados</li>
+				<li>Elementos: como divs</li>
+			</ul>
+		</li>
+		<li>Otra opción: usar pattern para simular comportamiento en los no soportados</li>
+		<li>Opera es el navegador más compatible con los estándares</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<img class="logo" src="images/HTML5.png" alt="logo HTML5"/>
+	<h1>Gracias</h1>
+	<div class="slide-footer">
+		<h2>@cesarcruzrueda</h2>
+		<h2>http://cesardelacruz.es</h2>
+		<h2>cesarcruz85 en gmail</h2>
+	</div>
+</section>
+
+	
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+<!-- Other extension HTML snippets go here, at the bottom of the deck container. -->
+
+<!-- Update these paths to point to the correct files. -->
+<script src="jquery-1.7.min.js"></script>
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+<script src="validate.js"></script>
+
+<!-- Add any other extension JS files here -->
+
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+		$.deck('enableScale');
+	});
+</script>
+</body>
+</html>

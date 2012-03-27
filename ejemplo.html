@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ejemplo HTML5 Forms</title>
+		<link rel="stylesheet" href="themes/style/style.css" type="text/css">
+	</head>
+	<body>
+		<section id="wrapper">
+			<h2>Portal de trabajo</h2>
+			<aside>
+				<label>progreso <output id="p">0</output><span>/3</span>:</label>
+				<progress name="progress" id="progress" class="progress" max=3 value="0"></progress>
+			</aside>
+			<form id="ejemplo" oninput="document.getElementById('o').innerHTML = document.getElementById('range').value">
+				<fieldset class="field-1">
+					<legend>Datos de acceso</legend>
+					<p>
+						<label class="required" for="name">Nombre </label><input type="text" id="name" name="name" required autofocus placeholder="Pepito Perez" />
+					</p>
+					<p>
+						<label class="required" for="username">Usuario</label><input type="text" id="username" name="username" maxlength="10" name="username" placeholder="miusuario"  required />
+					</p>
+					<p>
+						<label class="required" for="password">Contraseña</label><input type="password" id="password" name="password" required />
+					</p>
+					<p>
+						<label class="required" for="password2">Repita contraseña</label><input type="password" id="password2" name="password2" required />
+					</p>
+					<a type="button" class="save btn" id="saved-1">siguiente</a>
+				</fieldset>
+				
+				<fieldset class="field-2">
+					<legend>Datos de Personales</legend>
+					<p>
+						<label class="required" for="date">Fecha nacimiento</label><input type="date" name="date" id="date" required />
+					</p>
+					<p>
+						<label class="required" for="email">Email</label><input type="email" name="email" id="email" placeholder="nombre@dominio.es" required />
+					</p>
+					<p>
+						<label for="url">Web</label><input type="url" name="url" id="url" placeholder="http://dominio.es" />
+					</p>
+					<p>
+						<label for="tel">Teléfono</label><input type="tel" name="tel" id="tel" placeholder="655555555" pattern="^(\+\d{2} )?(\d{9})$" />
+					</p>
+					<p>
+						<label for="imgs">Imágenes</label><input type="file" name="imgs" id="imgs" multiple />
+					</p>
+					<a type="button" class="save btn" id="saved-2">siguiente</a>
+				</fieldset>
+				
+				<fieldset class="field-3">
+					<legend>Datos Trabajo</legend>
+					<p>
+						<label class="required" for="exp">Experiencia(años) </label><input type="number" name="exp" id="exp" min="1" max="30" step="1" required/>
+					</p>
+					<p>
+						<label class="required" for="tech">Tecnologías:</label><input type="text" name="tech" list=techlist required />
+						<datalist id=techlist>
+							<option value="Ruby" />
+							<option value="PHP" />
+							<option value="Python" />
+							<option value="Java" />
+							<option value=".NET" />
+						</datalist>
+					</p>
+					<p>
+						<label class="required" for="range">Rango salarial</label><input type="range" id="range" min="18000" max="50000" step="500" value="21000" />
+						<output id="o">21000</output>
+					</p>
+					<p>
+						<label for="inc-date">Fecha incoporación</label><input type="date" name="inc-date" id="inc-date" />
+					</p>
+					<input type="submit" class="btn" id="saved-3" />
+				</fieldset>
+				
+			</form>
+		</section>
+		<script type="text/javascript" src="jquery-1.7.min.js"></script>	
+		<script src="checkExample.js"></script>
+		</script>
+	</body>	
+</html>
